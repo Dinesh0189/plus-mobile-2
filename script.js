@@ -365,8 +365,8 @@ function renderDashboard() {
 
     main.innerHTML = `
         <header class="flex flex-wrap items-center justify-between mb-6 gap-4">
-            <div>
-                <h1 class="text-3xl sm:text-4xl font-bold font-orbitron text-header tracking-tight">${getGreeting()}</h1>
+            <div class="flex-1 min-w-0">
+                <h1 class="text-3xl sm:text-4xl font-bold font-orbitron text-header tracking-tight truncate">${getGreeting()}</h1>
                 <div class="flex items-center text-md text-secondary">
                     <span id="current-date"></span><span class="mx-2">|</span><span id="current-time"></span>
                 </div>
@@ -2443,4 +2443,5 @@ window.importScheduleFromCSV = (event) => {
     reader.readAsText(file);
     event.target.value = null; 
 };
+
 
